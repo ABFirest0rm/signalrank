@@ -1,0 +1,16 @@
+.venv/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# large / generated data
+dataset/
+artifacts/
+outputs/
+
+# scratch notebooks
+notebooks/Untitled.ipynb
+
+# local junk
+.DS_Store
+Thumbs.db
