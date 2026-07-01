@@ -1,16 +1,51 @@
+﻿# Python
 .venv/
-.ipynb_checkpoints/
+venv/
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
-# large / generated data
-dataset/
-artifacts/
-outputs/
+# Jupyter
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
 
-# scratch notebooks
-notebooks/Untitled.ipynb
+# Local backups
+__backup_before_cleanup_*/
 
-# local junk
+# Raw large dataset
+dataset/candidates.jsonl
+dataset/candidates.jsonl.gz
+
+# Generated dataset artifacts
+# These are required for rank.py, but too large/noisy for normal git.
+# Provide them through artifact zip/link and document in README.
+dataset/artifacts/*.parquet
+
+# Embedding artifacts
+# Required for rank.py, but likely too large for GitHub normal git.
+artifacts/*.npy
+artifacts/*.parquet
+
+# Keep artifact instruction files
+!artifacts/README.md
+!dataset/artifacts/README.md
+
+# Diagnostic outputs
+outputs/diagnostics/
+outputs/*diagnostic*.csv
+
+# Keep final CSV outputs
+!outputs/team_xxx.csv
+!outputs/top100_ranked.csv
+
+# OS/editor junk
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/notebooks/output/
+notebooks/artifacts/
+notebooks/output/
+notebooks/artifacts/
+!outputs/SignalRank.csv
+!outputs/SignalRank.csv
