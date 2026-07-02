@@ -1,0 +1,9 @@
+pandas
+numpy
+pyarrow
+polars
+scipy
+orjson
+tqdm
+torch
+sentence-transformers
