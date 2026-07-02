@@ -1,0 +1,26 @@
+team_name: SignalRank
+primary_contact:
+  name: Abey Ajit
+  email: ajitabey@yahoo.com
+  phone: ""
+
+github_repository_url: https://github.com/ABFirest0rm/signalrank
+sandbox_demo_link: ""
+
+ai_tools_declared:
+  - Claude
+  - ChatGPT
+
+compute_environment_summary: "Windows machine, Python virtual environment/uv. GPU used only for offline embedding precompute. Final ranking step is CPU-only and measured at ~4.67 seconds."
+
+team_members:
+  - name: Abey Ajit
+    email: ajitabey@yahoo.com
+
+methodology_summary: >
+  SignalRank uses a two-phase hybrid ranking pipeline. Offline scripts parse candidate JSONL,
+  compute availability features, and precompute BGE embeddings for candidate job-history text
+  and JD-derived query probes. The final CPU-only ranker loads local parquet/npy artifacts,
+  computes semantic must-have scores, applies behavioral/seniority multipliers, and writes a
+  validator-ready top-100 CSV with candidate-specific reasoning. The final ranking step uses
+  no network, no hosted LLM APIs, and no GPU.
