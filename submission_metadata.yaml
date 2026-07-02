@@ -1,17 +1,23 @@
 team_name: SignalRank
+
 primary_contact:
   name: Abey Ajit
   email: ajitabey@yahoo.com
-  phone: ""
+  phone: "+91XXXXXXXXXX"
 
-github_repository_url: https://github.com/ABFirest0rm/signalrank
-sandbox_demo_link: ""
+github_repository_url: "https://github.com/ABFirest0rm/signalrank"
+
+sandbox_demo_link: "https://colab.research.google.com/drive/1U-wI02xjG6RBt3UBdvnvmdgCtzTuL50G?usp=sharing"
+
+artifact_download_link: "https://drive.google.com/file/d/187XhR7Qs7VD4c_F6hfIsKh8LiIFWsCRp/view?usp=sharing"
+
+final_submission_file: "outputs/SignalRank.csv"
 
 ai_tools_declared:
-  - Claude
   - ChatGPT
+  - Claude
 
-compute_environment_summary: "Windows machine, Python virtual environment/uv. GPU used only for offline embedding precompute. Final ranking step is CPU-only and measured at ~4.67 seconds."
+compute_environment_summary: "Windows machine, Python virtual environment/uv. GPU used only for offline embedding precompute. Final ranking step is CPU-only and measured at approximately 4.67 seconds."
 
 team_members:
   - name: Abey Ajit
@@ -21,6 +27,6 @@ methodology_summary: >
   SignalRank uses a two-phase hybrid ranking pipeline. Offline scripts parse candidate JSONL,
   compute availability features, and precompute BGE embeddings for candidate job-history text
   and JD-derived query probes. The final CPU-only ranker loads local parquet/npy artifacts,
-  computes semantic must-have scores, applies behavioral/seniority multipliers, and writes a
-  validator-ready top-100 CSV with candidate-specific reasoning. The final ranking step uses
-  no network, no hosted LLM APIs, and no GPU.
+  computes semantic must-have scores, applies behavioral, seniority, availability, job-hopper,
+  and trap multipliers, and writes a validator-ready top-100 CSV with candidate-specific
+  reasoning. The final ranking step uses no network, no hosted LLM APIs, and no GPU.
